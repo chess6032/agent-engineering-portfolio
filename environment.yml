@@ -1,0 +1,8 @@
+name: cs301R
+channels:
+  - defaults
+dependencies:
+  - python=3.11
+  - openai
+  - gradio
+prefix: /users/student/c/calebkh/miniconda3/envs/cs301R
