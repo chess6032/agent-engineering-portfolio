@@ -1,20 +1,29 @@
-from openai import OpenAI
 import os
+from openai import OpenAI
 
-model = os.environ.get('model')
-model = model if model else "gpt-5.4-mini"
+from usage import print_usage
 
-client = OpenAI()
+if __name__ == "__main__":
+    model = os.environ.get('model')
+    model = model if model else "gpt-5.4-mini"
 
-print(f"Using model {model}")
-inputText = input('Enter your prompt:\n')
+    nofmt = os.environ.get('noformat')
 
-if not inputText:
-    exit(0)
+    client = OpenAI()
 
-response = client.responses.create(
-    model=model,
-    input=inputText,
-)
+    print(f"Using model {model}")
+    userText = input('Enter your prompt:\n')
 
-print(response.output_text)
+    if not userText:
+        exit(0)
+
+    inputText = ('(Respond in plain text, with no Markdown formatting.) ' if nofmt else '') + userText
+
+    response = client.responses.create(
+        model=model,
+        input=inputText,
+    )
+
+    print()
+    print(response.output_text)
+    print_usage(model=model, usage=response.usage)
