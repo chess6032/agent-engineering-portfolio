@@ -1,118 +1,73 @@
 {
-  "lastUpdated": "2026-09-08",
-  "models": {
-    "_comment": "Prices in USD per 1,000,000 tokens. Source: platform.openai.com/docs/pricing, copied by user 2026-09-08. 'standard' = normal processing tier, 'priority' = faster/priority tier. '-' in the original table means not offered for that model -> represented as null here.",
-    "gpt-6-astra": {
-      "standard": {
-        "input": 10,
-        "cached_input": 1,
-        "cache_write": 12.5,
-        "output": 50
-      },
-      "priority": {
-        "input": 20,
-        "cached_input": 2,
-        "cache_write": 25,
-        "output": 75
-      }
+    "gpt-6-astra": {"input": 10.00, "cached": 1.00, "output": 50.00},
+    "gpt-5.6-sol": {"input": 4.00, "cached": 0.40, "output": 20.00},
+    "gpt-5.6-terra": {"input": 2.00, "cached": 0.20, "output": 12.00},
+    "gpt-5.6-luna": {"input": 0.20, "cached": 0.02, "output": 1.20},
+    "gpt-5.6-cyber": {"input": 12.50, "cached": 1.25, "output": 75.00},
+    "gpt-daybreak-blue-latest": {"input": 4.00, "cached": 0.40, "output": 20.00},
+    "gpt-daybreak-red-latest": {"input": 12.50, "cached": 1.25, "output": 75.00},
+    "chat-latest": {"input": 5.00, "cached": 0.50, "output": 30.00},
+    "gpt-5.4": {"input": 2.25, "cached": 0.225, "output": 18.00},
+    "gpt-5.4-pro": {"input": 27.00, "cached": 0.0, "output": 216.00},
+    "gpt-5.3-chat-latest": {"input": 1.75, "cached": 0.175, "output": 14.00},
+    "gpt-5.3-codex": {"input": 1.75, "cached": 0.175, "output": 14.00},
+    "gpt-5.2": {"input": 1.75, "cached": 0.175, "output": 14.00},
+    "gpt-5.2-chat-latest": {"input": 1.75, "cached": 0.175, "output": 14.00},
+    "gpt-5.2-codex": {"input": 1.75, "cached": 0.175, "output": 14.00},
+    "gpt-5.2-pro": {"input": 21.00, "cached": 0.0, "output": 168.00},
+    "gpt-5.1": {"input": 1.25, "cached": 0.125, "output": 10.00},
+    "gpt-5.1-chat-latest": {"input": 1.25, "cached": 0.125, "output": 10.00},
+    "gpt-5.1-codex": {"input": 1.25, "cached": 0.125, "output": 10.00},
+    "gpt-5.1-codex-max": {"input": 1.25, "cached": 0.125, "output": 10.00},
+    "gpt-5": {"input": 1.25, "cached": 0.125, "output": 10.00},
+    "gpt-5-chat-latest": {"input": 1.25, "cached": 0.125, "output": 10.00},
+    "gpt-5-codex": {"input": 1.25, "cached": 0.125, "output": 10.00},
+    "gpt-5-pro": {"input": 15.00, "cached": 0.0, "output": 120.00},
+    "gpt-5-mini": {"input": 0.25, "cached": 0.025, "output": 2.00},
+    "gpt-5-nano": {"input": 0.05, "cached": 0.005, "output": 0.40},
+    "gpt-4.1": {"input": 2.00, "cached": 0.50, "output": 8.00},
+    "gpt-4.1-mini": {"input": 0.40, "cached": 0.10, "output": 1.60},
+    "gpt-4.1-nano": {"input": 0.10, "cached": 0.025, "output": 0.40},
+    "gpt-4o-transcribe": {"input": 0.0, "cached": 0.0, "output": 10.00, "audio_input": 2.50},
+    "gpt-4o-mini-transcribe": {"input": 0.0, "cached": 0.0, "output": 5.00, "audio_input": 1.25},
+    "gpt-4o-mini-tts": {"input": 0.60, "cached": 0.0, "output": 0.0, "audio_output": 12.00},
+    "gpt-4o-audio-preview": {
+        "input": 2.50,
+        "cached": 1.25,
+        "output": 10.00,
+        "audio_input": 40.00,
+        "audio_output": 80.00
     },
-    "gpt-5.6-sol": {
-      "standard": {
-        "input": 4,
-        "cached_input": 0.4,
-        "cache_write": 5,
-        "output": 20
-      },
-      "priority": {
-        "input": 8,
-        "cached_input": 0.8,
-        "cache_write": 10,
-        "output": 30
-      }
+    "gpt-4o-mini-audio-preview": {
+        "input": 0.15,
+        "cached": 0.075,
+        "output": 0.60,
+        "audio_input": 10.00,
+        "audio_output": 20.00
     },
-    "gpt-5.6-terra": {
-      "standard": {
-        "input": 2,
-        "cached_input": 0.2,
-        "cache_write": 2.5,
-        "output": 12
-      },
-      "priority": {
-        "input": 4,
-        "cached_input": 0.4,
-        "cache_write": 5,
-        "output": 18
-      }
+    "gpt-audio": {
+        "input": 2.50,
+        "cached": 1.25,
+        "output": 10.00,
+        "audio_input": 32.00,
+        "audio_output": 64.00
     },
-    "gpt-5.6-luna": {
-      "standard": {
-        "input": 0.2,
-        "cached_input": 0.02,
-        "cache_write": 0.25,
-        "output": 1.2
-      },
-      "priority": {
-        "input": 0.4,
-        "cached_input": 0.04,
-        "cache_write": 0.5,
-        "output": 1.8
-      }
+    "gpt-audio-mini": {"input": 0.60, "cached": 0.30, "output": 2.40},
+    "gpt-realtime-2.1": {
+        "input": 4.00,
+        "cached": 0.40,
+        "output": 24.00,
+        "audio_input": 32.00,
+        "audio_output": 64.00
     },
-    "gpt-5.5": {
-      "standard": {
-        "input": 5,
-        "cached_input": 0.5,
-        "cache_write": null,
-        "output": 30
-      },
-      "priority": {
-        "input": 10,
-        "cached_input": 1,
-        "cache_write": null,
-        "output": 45
-      }
+    "gpt-realtime-2.1-mini": {
+        "input": 0.60,
+        "cached": 0.06,
+        "output": 2.40,
+        "audio_input": 10.00,
+        "audio_output": 20.00
     },
-    "gpt-5.5-pro": {
-      "standard": {
-        "input": 30,
-        "cached_input": null,
-        "cache_write": null,
-        "output": 180
-      },
-      "priority": {
-        "input": 60,
-        "cached_input": null,
-        "cache_write": null,
-        "output": 270
-      }
-    },
-    "gpt-5.4": {
-      "standard": {
-        "input": 2.5,
-        "cached_input": 0.25,
-        "cache_write": null,
-        "output": 15
-      },
-      "priority": {
-        "input": 5,
-        "cached_input": 0.5,
-        "cache_write": null,
-        "output": 22.5
-      }
-    },
-    "gpt-5.4-pro": {
-      "standard": {
-        "input": 30,
-        "cached_input": null,
-        "cache_write": null,
-        "output": 180
-      },
-      "priority": {
-        "input": null,
-        "cached_input": null,
-        "cache_write": null,
-        "output": null
-      }
-    }
-  }
+    "gpt-image-2.5-sunburst": {"input": 5.00, "cached": 1.25, "output": 0.0},
+    "gpt-image-2.5-flare": {"input": 5.00, "cached": 1.25, "output": 0.0},
+    "whisper-1": {"input": 0.006, "cached": 0.0, "output": 0.0}
 }

@@ -1,0 +1,71 @@
+For each model object in this .json file, sum the "cached_input" and "cache_write" and attributes into a single "cached" attribute.
+
+```json
+{
+    "gpt-6-astra": {
+        "input": 10,
+        "cached_input": 1,
+        "cache_write": 12.5,
+        "output": 50
+    }
+}
+```
+
+Output the resulting JSON only. Do not include any other text.
+
+Here's the JSON:
+
+```
+{
+  "_comment": "Prices in USD per 1,000,000 tokens. Source: platform.openai.com/docs/pricing, copied by me on 2026-09-08. All pricings below come from the \"standard\" section.",
+  "lastUpdated": "2026-09-08",
+  "gpt-6-astra": {
+    "input": 10,
+    "cached_input": 1,
+    "cache_write": 12.5,
+    "output": 50
+  },
+  "gpt-5.6-sol": {
+    "input": 4,
+    "cached_input": 0.4,
+    "cache_write": 5,
+    "output": 20
+  },
+  "gpt-5.6-terra": {
+    "input": 2,
+    "cached_input": 0.2,
+    "cache_write": 2.5,
+    "output": 12
+  },
+  "gpt-5.6-luna": {
+    "input": 0.2,
+    "cached_input": 0.02,
+    "cache_write": 0.25,
+    "output": 1.2
+  },
+  "gpt-5.5": {
+    "input": 5,
+    "cached_input": 0.5,
+    "cache_write": null,
+    "output": 30
+  },
+  "gpt-5.5-pro": {
+    "input": 30,
+    "cached_input": null,
+    "cache_write": null,
+    "output": 180
+  },
+  "gpt-5.4": {
+    "input": 2.5,
+    "cached_input": 0.25,
+    "cache_write": null,
+    "output": 15
+  },
+  "gpt-5.4-pro": {
+    "input": 30,
+    "cached_input": null,
+    "cache_write": null,
+    "output": null
+  }
+}
+```

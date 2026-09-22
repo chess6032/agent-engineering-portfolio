@@ -16,6 +16,8 @@ with open('pricing.json') as f:
         print(e)
         exit(1)
 
+print(PRICING.get('gpt-5.6-luna'))
+
 def _calculate_cost_usd(model, usage) -> float:
     rates = PRICING.get(model)
     if not rates:
