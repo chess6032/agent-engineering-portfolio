@@ -16,14 +16,24 @@ if __name__ == "__main__":
     print(f"Using model {model}")
     print('-------- Enter your prompt: --------')
 
-    userText = sys.stdin.read()
-
-    print('-------- Processing... --------')
+    userText = ''
+    while True:
+        try:
+            line = input()
+        except EOFError:
+            break
+        userText += '\n' + line
 
     if not userText:
         exit(0)
+    
+    print('-------- Processing... --------')
 
-    inputText = ('' if fmt else '(Respond in plain text, with no Markdown formatting.) ') + userText
+    preamble = "(Fully answer the following prompt to the best of your ability **in one response**. " \
+        + "Do not ask for further input from the user or anticipate further conversation in any way. " \
+        + "Respond in plain text, with no Markdown formatting.)\n"
+
+    inputText = preamble + userText
 
     response = client.responses.create(
         model=model,
