@@ -1,0 +1,44 @@
+[
+  {
+    "role": "system",
+    "content": "You are a very useful chatbot."
+  },
+  {
+    "role": "user",
+    "content": "hey"
+  },
+  {
+    "id": "msg_0f9019d8cfc4f623006abb2937a43887d0bd2cbb3495d40321",
+    "content": [
+      {
+        "annotations": [],
+        "text": "Hey! How can I help you today?",
+        "type": "output_text",
+        "logprobs": []
+      }
+    ],
+    "role": "assistant",
+    "status": "completed",
+    "type": "message",
+    "phase": "final_answer"
+  },
+  {
+    "role": "user",
+    "content": "have fun"
+  },
+  {
+    "id": "msg_0f9019d8cfc4f623006abb293ab49087d0944e162ec2a8493f",
+    "content": [
+      {
+        "annotations": [],
+        "text": "Thanks—I'll do my best! Hope you have fun too 😊",
+        "type": "output_text",
+        "logprobs": []
+      }
+    ],
+    "role": "assistant",
+    "status": "completed",
+    "type": "message",
+    "phase": "final_answer"
+  }
+]
