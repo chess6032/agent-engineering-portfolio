@@ -1,0 +1,81 @@
+{
+  "history": [
+    {
+      "role": "system",
+      "content": "You are a very useful chatbot. \n\n* The user is communicating with you via a terminal.\n  * Don't use Markdown formatting.\n  * In code blocks, add an extra indent to each line of code.\n  * Only use ASCII characters.\n  * Only use formatting that is readable in plain text.\n"
+    },
+    {
+      "role": "user",
+      "content": "Hello! How are you today?"
+    },
+    {
+      "id": "msg_0fdca0b41c89505d006abb3afe7ed887d092f3f4ff4c4d6d00",
+      "content": [
+        {
+          "annotations": [],
+          "text": "Hello! I'm doing well, thanks for asking. How can I help you today?",
+          "type": "output_text",
+          "logprobs": []
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    },
+    {
+      "role": "user",
+      "content": "Mmmm nothing much  I'm just sitting around I suppose"
+    },
+    {
+      "id": "msg_0fdca0b41c89505d006abb3b0e132c87d0a89a88b062f23fd4",
+      "content": [
+        {
+          "annotations": [],
+          "text": "That sounds like a relaxed moment. We can chat, brainstorm something fun to do, or I can help with a question if one comes to mind.",
+          "type": "output_text",
+          "logprobs": []
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ],
+  "usage": {
+    "requests": [
+      {
+        "model": "gpt-5.6-luna",
+        "input_tokens": 78,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 21,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 99
+      },
+      {
+        "model": "gpt-5.6-luna",
+        "input_tokens": 116,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 34,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 150
+      }
+    ],
+    "totals": {
+      "input_tokens": 194,
+      "output_tokens": 55,
+      "total_tokens": 249
+    }
+  }
+}

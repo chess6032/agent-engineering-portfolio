@@ -14,18 +14,17 @@ def get_user_input() -> str:
     text = ''
     while (line := input()):
         text += line
+        if not (line.endswith('  ') or line == ' '):
+            break
     return text
 
 def div(div_type: str) -> str:
+    user_div = '*  ' * 10
     if div_type == 'user':
-        return '. . . \n'
+        return user_div
     elif div_type == 'agent':
-        return '\n-----------\n'
+        return '_' * len(user_div.strip())
     else: raise ValueError()
-
-def print_div(div_type: str) -> None:
-    d = div(div_type)
-    print(d, end='')
 
 def main(model: str, reasoning: str, prompt: str) -> tuple[list, list]:
     client = OpenAI()
@@ -35,7 +34,8 @@ def main(model: str, reasoning: str, prompt: str) -> tuple[list, list]:
     try:
         while True:
             user_msg = get_user_input()
-            print_div('user')
+            if user_msg:
+                print(div('user'))
             if not user_msg:
                 break
             history.append({'role': 'user', 'content': user_msg})
@@ -51,7 +51,7 @@ def main(model: str, reasoning: str, prompt: str) -> tuple[list, list]:
             history.extend(response.output)
         
             print(f'{round(time()-start, 2)} seconds elapsed', file=sys.stderr)
-            print_div('agent')
+            print(div('agent'))
     except KeyboardInterrupt:
         # catch keyboard interrupts so the history still gets returned (and thus printed)
         pass

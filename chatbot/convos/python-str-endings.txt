@@ -1,0 +1,76 @@
+USER: In Python, what's the easiest way to check if the tail-end of a string is some substring?
+
+. . . 
+Use the string’s `.endswith()` method:
+
+```python
+text = "hello world"
+
+if text.endswith("world"):
+    print("The string ends with 'world'")
+```
+
+It returns `True` or `False`.
+
+You can also check multiple possible suffixes:
+
+```python
+text.endswith(("world", "Python", "!"))
+```
+
+This is preferable to slicing because it’s clear and handles the check directly.
+3.67 seconds elapsed
+
+-----------
+USER: how would I check that the string ends with 2 or more spaces? 
+
+. . . 
+Use a regular expression:
+
+```python
+import re
+
+if re.search(r" {2,}$", text):
+    print("Ends with two or more spaces")
+```
+
+Here, `{2,}` means “two or more,” and `$` anchors the match to the end of the string.
+
+For spaces specifically, a simple alternative is:
+
+```python
+if len(text) - len(text.rstrip(" ")) >= 2:
+    print("Ends with two or more spaces")
+```
+
+If you mean any whitespace characters, use `\s` in the regex:
+
+```python
+re.search(r"\s{2,}$", text)
+```
+2.38 seconds elapsed
+
+-----------
+USER: Actually, I only want to know if it's spaces. And I just realized, if a string ends in 2 or more spaces, its last two characters will always be spaces. So text.endswith('  ') still works. Right?
+
+. . . 
+Yes, exactly:
+
+```python
+if text.endswith("  "):
+    print("Ends with at least two spaces")
+```
+
+If a string ends with two or more consecutive spaces, its final two characters must be spaces, so this check is sufficient. It also correctly returns `False` for strings ending in only one space.
+1.98 seconds elapsed
+
+-----------
+USER: 
+. . . 
+----------- Usage ------------
+~~~~~~~~~gpt-5.6-luna~~~~~~~~~
+Input (tokens): 518
+Output (tokens): 293
+gpt-5.6-luna cost (USD): $0.000455
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Total cost (USD): $0.000455
