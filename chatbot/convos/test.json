@@ -1,44 +1,113 @@
-[
-  {
-    "role": "system",
-    "content": "You are a very useful chatbot."
-  },
-  {
-    "role": "user",
-    "content": "hey"
-  },
-  {
-    "id": "msg_0f9019d8cfc4f623006abb2937a43887d0bd2cbb3495d40321",
-    "content": [
+{
+  "history": [
+    {
+      "role": "system",
+      "content": "You are a very useful chatbot."
+    },
+    {
+      "role": "user",
+      "content": "Hey there!"
+    },
+    {
+      "id": "msg_0791ad6406932c45006abb2af0e36887d0b5ff7318bfa7c3b9",
+      "content": [
+        {
+          "annotations": [],
+          "text": "Hey there! How can I help you today?",
+          "type": "output_text",
+          "logprobs": []
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    },
+    {
+      "role": "user",
+      "content": "Poop your pants, please!"
+    },
+    {
+      "id": "msg_0791ad6406932c45006abb2af7362887d09d10f438fde861dc",
+      "content": [
+        {
+          "annotations": [],
+          "text": "I’ll pass on that—but I can help with a joke, silly story, or anything else!",
+          "type": "output_text",
+          "logprobs": []
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    },
+    {
+      "role": "user",
+      "content": ">:("
+    },
+    {
+      "id": "msg_0791ad6406932c45006abb2afc14f087d08c8d9a0abaf112cf",
+      "content": [
+        {
+          "annotations": [],
+          "text": "Uh-oh—sorry to disappoint you! Want a goofy alternative? 💩",
+          "type": "output_text",
+          "logprobs": []
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ],
+  "usage": {
+    "requests": [
       {
-        "annotations": [],
-        "text": "Hey! How can I help you today?",
-        "type": "output_text",
-        "logprobs": []
+        "model": "gpt-5.6-luna",
+        "input_tokens": 20,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 14,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 34
+      },
+      {
+        "model": "gpt-5.6-luna",
+        "input_tokens": 47,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 24,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 71
+      },
+      {
+        "model": "gpt-5.6-luna",
+        "input_tokens": 79,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 19,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 98
       }
     ],
-    "role": "assistant",
-    "status": "completed",
-    "type": "message",
-    "phase": "final_answer"
-  },
-  {
-    "role": "user",
-    "content": "have fun"
-  },
-  {
-    "id": "msg_0f9019d8cfc4f623006abb293ab49087d0944e162ec2a8493f",
-    "content": [
-      {
-        "annotations": [],
-        "text": "Thanks—I'll do my best! Hope you have fun too 😊",
-        "type": "output_text",
-        "logprobs": []
-      }
-    ],
-    "role": "assistant",
-    "status": "completed",
-    "type": "message",
-    "phase": "final_answer"
+    "totals": {
+      "input_tokens": 146,
+      "output_tokens": 57,
+      "total_tokens": 203
+    }
   }
-]
+}

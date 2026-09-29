@@ -7,6 +7,7 @@ import json
 from openai import OpenAI
 
 from usage import print_usage
+from dumper import output_to_json
 
 def main(model: str, reasoning: str, prompt: str) -> tuple[list, list]:
     client = OpenAI()
@@ -39,19 +40,6 @@ def main(model: str, reasoning: str, prompt: str) -> tuple[list, list]:
 
     return history, usage
 
-def output_convo_to_json(history: list, out_path: Path) -> None:
-    def to_dict(item):
-        if isinstance(item, dict):
-            return item
-        # Pydantic model from response.output (messages, reasoning items, tool calls, etc.)
-        return item.model_dump(mode='json', exclude_none=True)
-
-    out_path = Path(out_path)
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    with out_path.open('w', encoding='utf-8') as f:
-        json.dump([to_dict(item) for item in history], f, indent=2, ensure_ascii=False)
-
-
 # Launch app
 if __name__ == "__main__":
     parser = argparse.ArgumentParser('AI Response')
@@ -61,6 +49,6 @@ if __name__ == "__main__":
     parser.add_argument('--out', default=None)
 
     args = parser.parse_args()
-    history = main(args.model, args.reasoning, args.prompt_file.read_text())
+    history, usage = main(args.model, args.reasoning, args.prompt_file.read_text())
     if args.out:
-        output_convo_to_json(history, args.out)
+        output_to_json(history, usage, args.out)
