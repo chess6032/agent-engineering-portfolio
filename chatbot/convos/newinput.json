@@ -1,0 +1,209 @@
+{
+  "history": [
+    {
+      "role": "system",
+      "content": "You are a very useful chatbot."
+    },
+    {
+      "role": "user",
+      "content": "Hello there"
+    },
+    {
+      "id": "msg_021f28ac00f32a38006abb3615ce0c87d0a16931418081a6ae",
+      "content": [
+        {
+          "annotations": [],
+          "text": "Hello! How can I help you today?",
+          "type": "output_text",
+          "logprobs": []
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    },
+    {
+      "role": "user",
+      "content": "You're supposed to say \"General Kenobi\""
+    },
+    {
+      "id": "msg_021f28ac00f32a38006abb3623149887d0b1b8e57dbbc4cafe",
+      "content": [
+        {
+          "annotations": [],
+          "text": "General Kenobi! 👋",
+          "type": "output_text",
+          "logprobs": []
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    },
+    {
+      "role": "user",
+      "content": "No, you're supposed to say that when I say \"Hello there\""
+    },
+    {
+      "id": "msg_021f28ac00f32a38006abb36333a1487d0a1622f45d7e82494",
+      "content": [
+        {
+          "annotations": [],
+          "text": "General Kenobi! 👋",
+          "type": "output_text",
+          "logprobs": []
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    },
+    {
+      "role": "user",
+      "content": "I didn't say hello there bruv"
+    },
+    {
+      "id": "msg_021f28ac00f32a38006abb363bda7487d0a6979935aa28f8a3",
+      "content": [
+        {
+          "annotations": [],
+          "text": "Fair point, bruv—you didn’t say “Hello there” that time. 😄",
+          "type": "output_text",
+          "logprobs": []
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    },
+    {
+      "role": "user",
+      "content": "WHy you callin gme bruv"
+    },
+    {
+      "id": "msg_021f28ac00f32a38006abb3643a4bc87d0998c845ef48e4e5e",
+      "content": [
+        {
+          "annotations": [],
+          "text": "My bad—I was matching your wording. I’ll keep it neutral.",
+          "type": "output_text",
+          "logprobs": []
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    },
+    {
+      "role": "user",
+      "content": "bruv"
+    },
+    {
+      "id": "msg_021f28ac00f32a38006abb364a99dc87d0a5d31cdbd58d4474",
+      "content": [
+        {
+          "annotations": [],
+          "text": "Yes?",
+          "type": "output_text",
+          "logprobs": []
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ],
+  "usage": {
+    "requests": [
+      {
+        "model": "gpt-5.6-luna",
+        "input_tokens": 19,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 13,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 32
+      },
+      {
+        "model": "gpt-5.6-luna",
+        "input_tokens": 47,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 10,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 57
+      },
+      {
+        "model": "gpt-5.6-luna",
+        "input_tokens": 77,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 10,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 87
+      },
+      {
+        "model": "gpt-5.6-luna",
+        "input_tokens": 100,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 22,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 122
+      },
+      {
+        "model": "gpt-5.6-luna",
+        "input_tokens": 137,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 18,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 155
+      },
+      {
+        "model": "gpt-5.6-luna",
+        "input_tokens": 163,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 6,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 169
+      }
+    ],
+    "totals": {
+      "input_tokens": 543,
+      "output_tokens": 79,
+      "total_tokens": 622
+    }
+  }
+}
